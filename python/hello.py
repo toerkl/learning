@@ -1,8 +1,8 @@
 import math
 
 # Say hello
-print(hello)
 # This is a Python comment
+print("hello")
 # This variable contains an integer
 quantity = 14
 # This variable contains a float
