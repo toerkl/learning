@@ -36,8 +36,16 @@ print(sample4)
 
 # Multiline f-strings
 output = f"""
-Subtotal: ${subtotal:,.2f}
+Subtotal:  ${subtotal:,.2f}
 Sales Tax: ${sales_tax:,.2f}
-Total: ${total:,.2f}
+Total:     ${total:,.2f}
+"""
+print(output)
+
+# Formatting width and alignment
+output = f"""
+Subtotal:  ${subtotal:>9,.2f}
+Sales Tax: ${sales_tax:>9,.2f}
+Total:     ${total:>9,.2f}
 """
 print(output)
