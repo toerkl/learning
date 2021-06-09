@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-x=255
+x = 255
 # covert decimal to other number systems
 x_bin = bin(x)
 x_oct = oct(x)
