@@ -49,3 +49,17 @@ Sales Tax: ${sales_tax:>9,.2f}
 Total:     ${total:>9,.2f}
 """
 print(output)
+
+# Concatenation of dollar sign and variables
+s_subtotal = "$" + f"{subtotal:,.2f}"
+s_sales_tax = "$" + f"{sales_tax:,.2f}"
+s_total = "$" + f"{total:,.2f}"
+
+
+# Output string with dollar sign already attached
+output = f"""
+Subtotal:  {s_subtotal:>9}
+Sales Tax: {s_sales_tax:>9}
+Total:     {s_total:>9}
+"""
+print(output)
