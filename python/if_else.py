@@ -7,5 +7,4 @@ elif age >= 21 and age < 80:
     beverage = "beer"
 else:
     beverage = "prune juice"
-
 print(f"Have a {beverage}")
