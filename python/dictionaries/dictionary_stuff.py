@@ -23,4 +23,4 @@ for person in persons:
     if (person in people):
         print(f"Person {people[person]} with key {person} is in dictionary.")
     else:
-        print(f"Person with key {person} does not is in dictionary")
+        print(f"Person with key {person} is not in dictionary")
