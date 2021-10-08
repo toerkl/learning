@@ -1,0 +1,11 @@
+How to deploy this on minikube:
+
+  kubectl apply -f secrets/mongo-secret.yaml
+  kubectl apply -f deployments/mongodb-deployment.yaml
+  kubectl apply -f configuration/mongodb/mongodb-deployment.yaml
+  kubectl apply -f mongo-configmap.yaml
+  kubectl apply -f mongo-express.yaml
+
+In order to create the external service on minikube you need to run the following:
+
+minikube service mongo-express-service
