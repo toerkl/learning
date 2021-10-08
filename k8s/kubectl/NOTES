@@ -1,0 +1,5 @@
+DEBUGGING
+kubectl logs [pod name]
+kubectl describe [pod name]
+Get interactive terminal
+kubectl exec -it [pod name] -- bin/bash
