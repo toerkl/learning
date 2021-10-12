@@ -12,6 +12,12 @@ employees = {
         'year_hired': 2004,
         'dob': '12/13/1990',
         'has_laptop': True
+    },
+    'bsvensson': {
+        'name': 'Bosse Svensson',
+        'year_hired': 2000,
+        'dob': '12/13/1980',
+        'has_laptop': True
     }
 }
 
