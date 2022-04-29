@@ -1,0 +1,29 @@
+---
+
+- name: Check if file exists
+  stat:
+    path: "{{ dd_file }}"
+  register: file_result
+
+- name: Create file
+  shell: dd if=/dev/zero of=file.fs bs=1024 count=1024000
+  when: not file_result.stat.exists
+
+- name: Create filesystem
+  filesystem:
+    fstype: ext4
+    device: "{{ dd_file }}"
+
+- name: Create mount dir
+  file:
+    path: "{{ mount_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: Mount filesystem
+  mount:
+    path: "{{ mount_dir }}"
+    src: "{{ dd_file }}"
+    fstype: ext4
+    state: present
+

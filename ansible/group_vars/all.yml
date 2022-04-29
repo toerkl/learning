@@ -1,0 +1,3 @@
+---
+dd_file: "/home/tobias/git/learning/ansible/file.fs"
+mount_dir: "/monkey"

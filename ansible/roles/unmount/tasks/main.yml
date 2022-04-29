@@ -1,0 +1,11 @@
+---
+- name: Unmount file system
+  mount:
+    path: "{{ mount_dir }}"
+    state: absent
+
+- name: Remove file
+  file:
+    path: "{{ dd_file }}"
+    state: absent
+  tags: remove
