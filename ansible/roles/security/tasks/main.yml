@@ -1,0 +1,38 @@
+---
+
+- name: Set hostname for all hosts in inventory
+  hostname:
+    name: "{{ inventory_hostname }}"
+
+- name: Create {{ new_pi_user }}
+  user:
+    name: "{{ new_pi_user }}"
+    state: present
+    shell: "{{ default_shell }}"
+    groups: "{{ pi_groups }}"
+    append: yes
+
+- name: Copy public ssh key for new user {{ new_pi_user }}
+  authorized_key:
+    user: "{{ new_pi_user }}"
+    state: present
+    key: "{{ lookup('file', ssh_pub_key) }}"
+    exclusive: yes
+
+- name: Copy custom sshd_config
+  template:
+    src: sshd_config.j2
+    dest: /etc/ssh/sshd_config
+    mode: '0644'
+    owner: root
+    group: root
+    backup: yes
+  notify:
+    - Restart sshd
+
+- name: Disable old user {{ old_pi_user }}
+  user:
+    name: "{{ old_pi_user }}"
+    state: present
+    password_lock: true
+    shell: "/sbin/nologin"

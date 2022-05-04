@@ -1,0 +1,27 @@
+---
+
+ssh_pub_key: '/home/tobias/.ssh/id_ed25519.pub'
+# default_shell: '/usr/bin/zsh'
+default_shell: '/bin/bash'
+old_pi_user: 'tobbe'
+new_pi_user: 'kong'
+sudo_group: sudo
+ssh_port: 22223
+pi_groups:
+  - adm
+  - dialout
+  - cdrom
+  - sudo
+  - audio
+  - video
+  - plugdev
+  - games
+  - users
+  - input
+  - render
+  - netdev
+  - lpadmin
+  - docker
+  - gpio
+  - i2c
+  - spi
