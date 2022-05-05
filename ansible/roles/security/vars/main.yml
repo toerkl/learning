@@ -3,8 +3,8 @@
 ssh_pub_key: '~/.ssh/id_ed25519.pub'
 # default_shell: '/usr/bin/zsh'
 default_shell: '/bin/bash'
-old_pi_user: 'tobbe'
-new_pi_user: 'kong'
+old_pi_user: 'king'
+new_pi_user: 'superman'
 sudo_group: sudo
 ssh_port: 22223
 pi_groups:

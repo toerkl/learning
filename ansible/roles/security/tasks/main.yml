@@ -1,9 +1,11 @@
 ---
 
+# Set hostname based on what is specified in inventory file
 - name: Set hostname for all hosts in inventory
   hostname:
     name: "{{ inventory_hostname }}"
 
+# Create new user that should be used
 - name: Create {{ new_pi_user }}
   user:
     name: "{{ new_pi_user }}"
@@ -12,13 +14,24 @@
     groups: "{{ pi_groups }}"
     append: yes
 
+# This is added so that playbook can run with --check flag
+- name: Check if {{ new_pi_user }} really exists
+  getent:
+    database: passwd
+    key: "{{ new_pi_user }}"
+  ignore_errors: yes
+  register: getent_new_user_result
+
+# Copy ssh key for new user, if user was really created
 - name: Copy public ssh key for new user {{ new_pi_user }}
   authorized_key:
     user: "{{ new_pi_user }}"
     state: present
     key: "{{ lookup('file', ssh_pub_key) }}"
     exclusive: yes
+  when: getent_new_user_result.failed is false
 
+# Use custom sshd_config instead of default, to harden security
 - name: Copy custom sshd_config
   template:
     src: sshd_config.j2
@@ -30,9 +43,19 @@
   notify:
     - Restart sshd
 
+# Check if the old pi user exists
+- name: Check if {{ old_pi_user }} exists
+  getent:
+    database: passwd
+    key: "{{ old_pi_user }}"
+  ignore_errors: yes
+  register: getent_old_user_result
+
+# If old pi user exists, disable ability to login
 - name: Disable old user {{ old_pi_user }}
   user:
     name: "{{ old_pi_user }}"
     state: present
     password_lock: true
     shell: "/sbin/nologin"
+  when: getent_old_user_result.failed is false

@@ -5,5 +5,7 @@
 #test02 ansible_ssh_host=test02
 #rewl ansible_ssh_host=test01 ansible_port=22223
 #kewl ansible_ssh_host=test02 ansible_port=22223
-odin ansible_ssh_host=test01 ansible_port=22223
-tor ansible_ssh_host=test02 ansible_port=22223
+#odin ansible_ssh_host=test01 ansible_port=22223
+#tor ansible_ssh_host=test02 ansible_port=22223
+king-arthur ansible_ssh_host=test01 ansible_port=22223
+sir-lancelot ansible_ssh_host=test02 ansible_port=22223
