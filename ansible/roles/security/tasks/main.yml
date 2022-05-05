@@ -29,7 +29,7 @@
     state: present
     key: "{{ lookup('file', ssh_pub_key) }}"
     exclusive: yes
-  when: getent_new_user_result.failed is false
+  when: getent_new_user_result.failed == false
 
 # Use custom sshd_config instead of default, to harden security
 - name: Copy custom sshd_config
@@ -58,4 +58,4 @@
     state: present
     password_lock: true
     shell: "/sbin/nologin"
-  when: getent_old_user_result.failed is false
+  when: getent_old_user_result.failed == false
