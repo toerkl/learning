@@ -25,10 +25,9 @@ def alphabetize(original_list=[]):
         final_list += name + ', '
     # Knock off last comma space if final list is long enough
     final_list = final_list[:-2]
-    # Print the list
-    print(final_list)
+    return final_list
 
 
 names = ['Bosse Johansson', 'Nisse Svensson', 'Karl Karlsson']
-alphabetize(names)
+print(alphabetize(names))
 sorter('Östen', 'Achmed', 'Qvintus', 'Krulle')
