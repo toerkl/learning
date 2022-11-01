@@ -9,3 +9,4 @@ def currency(n, w=15):
 
 
 print(currency(100, w=20))
+print(currency(100000))
