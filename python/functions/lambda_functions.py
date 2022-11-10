@@ -21,5 +21,10 @@ currency = lambda n : f"${n:,.2f}"
 # Lambda function named percent
 percent = lambda n: f"{n:.2%}"
 
+# Lambda function named square
+square = lambda n: n * 2
+
 print(percent(1))
 print(currency(1000000))
+
+print(square(2))
