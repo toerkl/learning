@@ -18,7 +18,8 @@ class Member:
         # Set is active to True initially.
         self.is_active = True
         # Free expires
-        self.free_expires = dt.date.today() + dt.timedelta(days=Member.free_days)
+        self.free_expires = (
+                dt.date.today() + dt.timedelta(days=Member.free_days))
 
     def show_date_joined(self):
         return f"{self.fullname} joined on {self.date_joined}"
@@ -29,7 +30,8 @@ class Member:
 
     def isactive(self):
         if self.is_active is True:
-            return f"{self.fullname} is active. Free membership expires on {self.free_expires}"
+            return (f"{self.fullname} is active. "
+                    f"Free membership expires on {self.free_expires}")
         else:
             return f"{self.fullname} is inactive"
 
