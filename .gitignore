@@ -1,1 +1,4 @@
 terraform/eks/.terraform/modules/eks.kms
+terraform/eks/.terraform/
+terraform/eks/terraform.tfstate
+terraform/eks/terraform.tfstate.backup

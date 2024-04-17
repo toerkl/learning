@@ -1,7 +1,7 @@
 variable "vpc_name" {
   description = "Name of VPC"
   type        = string
-  default     = "Observability-test"
+  default     = "-"
 }
 variable "private_subnet_tag_name" {
   description = "Tag name of private subnets"
@@ -50,6 +50,6 @@ variable "cluster_version" {
 }
 variable "region" {
   description = "AWS region"
-  default     = "eu-west-1"
+  default     = "us-east-1"
   type        = string
 }
