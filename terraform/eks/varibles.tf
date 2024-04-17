@@ -3,6 +3,16 @@ variable "vpc_name" {
   type        = string
   default     = "Observability-test"
 }
+variable "private_subnet_tag_name" {
+  description = "Tag name of private subnets"
+  type        = string
+  default     = "tag:aws-cdk:subnet-name"
+}
+variable "private_subnet_tag_value" {
+  description = "Tag value of private subnets"
+  type        = string
+  default     = "PrivateSubnets"
+}
 variable "cluster_name" {
   description = "EKS cluster name"
   type        =  string

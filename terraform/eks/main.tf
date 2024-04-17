@@ -14,10 +14,10 @@ data "aws_subnets" "selected_subnets" {
     name     = "vpc-id"
     values   = [data.aws_vpc.selected_vpc.id]
   }
-  filter {
-    name     = "tag:aws-cdk:subnet-name"
-    values   = ["PrivateSubnets"]
-  }
+  #filter {
+  #  name     = var.private_subnet_tag_name
+  #  values   = var.private_subnet_tag_value
+  #}
 }
 
 data "aws_subnet" "selected_subnets" {
