@@ -1,3 +1,5 @@
+---
+
 gradientMode: "hue"
 cellIdPreamble: "cell-"
 cells:
@@ -7,6 +9,4 @@ cells:
       separator: "cr"
       units: "none"
       decimalPoints: 0
-    #labelColor:
-    #  thresholdsRef: "queuedepth"
     linkRef: "grafana-home"
