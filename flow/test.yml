@@ -1,6 +1,6 @@
 gradientMode: "hue"
 cellIdPreamble: "cell-"
-cells: 
+cells:
   memory:
     dataRef: "mem"
     label:
