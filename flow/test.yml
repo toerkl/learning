@@ -1,12 +1,5 @@
 ---
 
-gradientMode: "hue"
-cellIdPreamble: "cell-"
 cells:
-  cell-memory:
+  memory:
     dataRef: "mem"
-    label:
-      separator: "cr"
-      units: "none"
-      decimalPoints: 0
-    linkRef: "grafana-home"
