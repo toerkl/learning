@@ -1,0 +1,12 @@
+gradientMode: "hue"
+cellIdPreamble: "cell-"
+cells: 
+  memory:
+    dataRef: "mem"
+    label:
+      separator: "cr"
+      units: "none"
+      decimalPoints: 0
+    #labelColor:
+    #  thresholdsRef: "queuedepth"
+    linkRef: "grafana-home"
