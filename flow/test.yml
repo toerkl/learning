@@ -3,3 +3,8 @@
 cells:
   memory:
     dataRef: "mem"
+    label:
+      prefix: "Mem: "
+      units: "none"
+      decimalPoints: 0
+
