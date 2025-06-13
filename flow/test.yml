@@ -3,7 +3,7 @@
 gradientMode: "hue"
 cellIdPreamble: "cell-"
 cells:
-  memory:
+  cell-memory:
     dataRef: "mem"
     label:
       separator: "cr"
