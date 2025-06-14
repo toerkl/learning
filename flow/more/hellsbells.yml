@@ -4,19 +4,16 @@ cells:
   logstash:
     dataRef: "logstash"
     label:
-      prefix: "Logstash: "
       units: "none"
       decimalPoints: 0
   Latency:
     dataRef: "latency"
     label:
-      prefix: "Latency: "
       units: "none"
       decimalPoints: 0
   s3:
     dataRef: "s3"
     label:
-      prefix: "S3: "
       units: "none"
       decimalPoints: 0
 
