@@ -1,0 +1,22 @@
+---
+
+cells:
+  logstash:
+    dataRef: "logstash"
+    label:
+      #prefix: "Mem: "
+      units: "none"
+      decimalPoints: 0
+  Latency:
+    dataRef: "latency"
+    label:
+      #prefix: "Mem: "
+      units: "none"
+      decimalPoints: 0
+  s3:
+    dataRef: "s3"
+    label:
+      #prefix: "Mem: "
+      units: "none"
+      decimalPoints: 0
+
