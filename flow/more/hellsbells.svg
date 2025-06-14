@@ -5,7 +5,7 @@
 
 <text id="logstash" x="55" y="30" font-family="Helvetica" font-size="14" text-anchor="middle" fill="#000000">0</text>
 <text id="s3" x="325" y="30" font-family="Helvetica" font-size="14" text-anchor="middle" fill="#000000">0</text>
-<text id="latency" x="215" y="80" font-family="Helvetica" font-size="14" text-anchor="middle" fill="#000000">0</text>
+<text id="Latency" x="215" y="80" font-family="Helvetica" font-size="14" text-anchor="middle" fill="#000000">0</text>
 
 
 </svg>
