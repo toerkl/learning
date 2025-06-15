@@ -1,0 +1,19 @@
+---
+
+cells:
+  logstash:
+    dataRef: "ls"
+    label:
+      units: "none"
+      decimalPoints: 0
+  Latency:
+    dataRef: "s3_latency"
+    label:
+      units: "none"
+      decimalPoints: 0
+  s3:
+    dataRef: "s3_size"
+    label:
+      units: "none"
+      decimalPoints: 0
+
