@@ -1,13 +1,8 @@
 ---
 
 cells:
-  metric1:
-    dataRef: "m1"
-    label:
-      units: "none"
-      decimalPoints: 0
-  metric2:
-    dataRef: "m2"
+  coolmetrics:
+    dataRef: "metric1"
     label:
       units: "none"
       decimalPoints: 0
