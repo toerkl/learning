@@ -2,12 +2,12 @@
 
 cells:
   nisse:
-    dataRef: "one"
+    dataRef: "One"
     label:
       units: "none"
       decimalPoints: 0
   bosse:
-    dataRef: "two"
+    dataRef: "Two"
     label:
       units: "none"
       decimalPoints: 0
