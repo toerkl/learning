@@ -1,12 +1,12 @@
 ---
 
 cells:
-  cell-metric1:
+  metric1:
     dataRef: "m1"
     label:
       units: "none"
       decimalPoints: 0
-  cell-metric2:
+  metric2:
     dataRef: "m2"
     label:
       units: "none"
