@@ -1,0 +1,14 @@
+---
+
+cells:
+  nisse:
+    dataRef: "one"
+    label:
+      units: "none"
+      decimalPoints: 0
+  bosse:
+    dataRef: "two"
+    label:
+      units: "none"
+      decimalPoints: 0
+
