@@ -1,5 +1,5 @@
 ---
-
+cellIdPreamble: "cell-"
 cells:
   coolmetrics:
     dataRef: "metric1"
