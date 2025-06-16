@@ -1,9 +1,12 @@
 ---
+
+gradientMode: "hue"
 cellIdPreamble: "cell-"
 cells:
   coolmetrics:
     dataRef: "metric1"
     label:
+      separator: "cr"
       units: "none"
       decimalPoints: 0
 
